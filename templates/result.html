@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+
+<h2>Search Result</h2>
+
+{% if details %}
+
+<h3>{{ disease | capitalize }}</h3>
+
+<p><b>Description:</b> {{ details.description }}</p>
+<p><b>Symptoms:</b> {{ details.symptoms }}</p>
+<p><b>Treatment:</b> {{ details.treatment }}</p>
+
+{% else %}
+
+<p>❌ Disease not found in database.</p>
+
+{% endif %}
+
+<br>
+<a href="/">Search Again</a>
+
+</body>
+</html>
